@@ -1,0 +1,16 @@
+h1, h2 {
+    display: inline;
+}
+
+path {
+    stroke: black;
+    stroke-width: 1;
+}
+
+.header {
+    margin: 1.2em 0;
+}
+
+.vis-container {
+    text-align: center;
+}
