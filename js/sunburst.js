@@ -37,8 +37,7 @@
         u = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, o]),
         c = 5,
         s = 1e3,
-        h = d3.select("#vis"),
-        sys = d3.select(".system");
+        h = d3.select("#sunburst-vis");
 
     h.select("img").remove();
     var f = h.append("svg").attr("width", i + 2 * c).attr("height", l + 2 * c).append("g").attr("transform", "translate(" + [o + c, o + c] + ")");
