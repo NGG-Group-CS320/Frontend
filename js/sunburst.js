@@ -30,7 +30,8 @@
     function a(t) {
         return .299 * t.r + .587 * t.g + .114 * t.b;
     }
-    var i = 540,
+    var inlineHealthScore = false,
+        i = 540,
         l = i,
         o = i / 2,
         d = d3.scale.linear().range([0, 2 * Math.PI]),
@@ -110,7 +111,7 @@
         }), y.append("tspan").attr("x", 0).attr("dy", "1em").text(function(t) {
             return t.depth ? t.name.split(" ")[1] || "" : "";
         }), y.append("tspan").attr("x", 0).attr("dy", "1em").text(function (t) {
-            return t.score ? "(" + t.score + ")" : "";
+            return inlineHealthScore && t.score ? "(" + t.score + ")" : "";
         });
     });
 }();
