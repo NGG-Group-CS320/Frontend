@@ -7,6 +7,18 @@ body {
     margin-right: 0.1em;
 }
 
+.header h1 {
+    font-size: 48px;
+}
+
+.header h2, #line-vis-blurb h2 {
+    font-size: 36px;
+}
+
+#sunburst-vis {
+    font-size: 15px;
+}
+
 #sunburst-vis path, line {
     stroke: black;
     stroke-width: 1;
@@ -27,6 +39,11 @@ body {
     text-align: left;
     margin-left: -4em;
     margin-right: 4em;
+    font-size: 16px;
+}
+
+#line-vis-blurb .health-score-label, #line-vis-blurb .health-score {
+    display: inline;
 }
 
 .header {
