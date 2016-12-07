@@ -1,5 +1,10 @@
+body {
+    font-family: 'Hind', sans-serif;
+}
+
 .header h1, .header h2 {
     display: inline;
+    margin-right: 0.1em;
 }
 
 #sunburst-vis path, line {
@@ -9,13 +14,13 @@
 
 #line-vis path {
     stroke: grey;
-    stroke-width: 1.5;
+    stroke-width: 2;
     fill: none;
 }
 
 #line-vis path.current {
     stroke: black;
-    stroke-width: 2;
+    stroke-width: 3;
 }
 
 #line-vis-blurb {
