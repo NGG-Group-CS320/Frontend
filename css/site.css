@@ -1,10 +1,27 @@
-h1, h2 {
+.header h1, .header h2 {
     display: inline;
 }
 
-path {
+#sunburst-vis path, line {
     stroke: black;
     stroke-width: 1;
+}
+
+#line-vis path {
+    stroke: grey;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+#line-vis path.current {
+    stroke: black;
+    stroke-width: 2;
+}
+
+#line-vis-blurb {
+    text-align: left;
+    margin-left: -4em;
+    margin-right: 4em;
 }
 
 .header {
@@ -13,4 +30,8 @@ path {
 
 .vis-container {
     text-align: center;
+}
+
+.vis-container .yLabel {
+    baseline-shift: -2px;
 }

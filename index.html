@@ -28,14 +28,19 @@
                 </div>
             </div>
             <div class="row vis-container">
-                <div class="col-sm-offset-2 col-sm-8">
+                <div class="col-sm-offset-2 col-sm-8 wheel-vis">
                     <div id="sunburst-vis"><!-- Here be Sunbursts. --></div>
                     <script src="./js/sunburst.js"></script>
                 </div>
                 <div class="col-sm-2"></div>
-                <div class="col-sm-offset-2 col-sm-8">
+                <div class="col-sm-offset-2 col-sm-8 line-vis">
                     <div id="line-vis"><!-- Here be line graphs. --></div>
                     <script src="./js/line.js"></script>
+                </div>
+                <div class="col-sm-2 line-vis hidden" id="line-vis-blurb">
+                    <h2 class="system-name"></h2>
+                    <div class="health-score-label">Average Health Score:</div>
+                    <div class="health-score"></div>
                 </div>
             </div>
     </body>

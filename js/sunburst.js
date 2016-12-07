@@ -54,7 +54,9 @@
         }).outerRadius(function(t) {
             return Math.max(0, u(t.y + t.dy));
         });
-    d3.json("wheel.json", function(r, i) {
+    d3.json("./wheel.json", function(error, data) {
+        if (error) throw error;
+
         function l(n) {
             if (n.score) {
                 alert(
@@ -87,7 +89,7 @@
             }
         }
         var o = p.nodes({
-                children: i
+                children: data
             }),
             h = f.selectAll("path").data(o);
         h.enter().append("path").attr("id", function(t, n) {
@@ -115,4 +117,3 @@
         });
     });
 }();
-
