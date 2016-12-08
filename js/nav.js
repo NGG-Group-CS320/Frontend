@@ -58,6 +58,21 @@
         $("#line-vis").addClass("visible").removeClass("hidden");
     }
 
+    switch (window.location.hash.slice(2)) {
+    case "/home":
+        goHome();
+        break;
+    case "/about":
+        goAbout();
+        break;
+    case "/sunburst":
+        goSunburst();
+        break;
+    case "/line":
+        goLine();
+        break;
+    }
+
     $("#home-link").on("click", goHome);
     $("a[href=\"#!/home\"]").on("click", goHome);
     $("#about-link").on("click", goAbout);
