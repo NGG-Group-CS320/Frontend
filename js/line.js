@@ -7,7 +7,7 @@
         lowestScore = 0,
         highestScore = 800,
         y = d3.scale.linear().domain([highestScore, lowestScore]).range([0 + margin, height - margin]),
-        x = d3.scale.linear().domain([startTime, endTime]).range([0 + margin,  width]),
+        x = d3.scale.linear().domain([startTime, endTime]).range([6 + margin,  width]),
         times = d3.range(startTime, endTime),
         vis = d3.select("#line-vis").append("svg:svg").attr("width", width).attr("height", height).append("svg:g");
 
