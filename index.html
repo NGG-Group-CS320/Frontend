@@ -41,6 +41,12 @@
         <nav class="navbar navbar-inverted">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="#">
                         <img alt="The NGG Group" src="./img/ngg-logo.png">
                         <span>MF-DAT</span>
@@ -49,7 +55,7 @@
                 <div class="collapse navbar-collapse" id="primary-navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li id="home-link"><a href="#!/home">Home</a></li>
-                        <li id="about-link"><a href="#!/about">About</a></li>
+                        <li id="about-link"><a href="#!/about">About Us</a></li>
                         <li id="sunburst-link"><a href="#!/sunburst">Sunburst</a></li>
                         <li id="line-link"><a href="#!/line">Line</a></li>
                     </ul>
@@ -60,14 +66,89 @@
         <div class="container-fluid">
             <!-- Home Page -->
             <div class="row home visible">
-                <div class="col-sm-offset-2 col-sm-8">
-                    <h1>Welcome to MF-DAT.</h1>
-                    <p>Click <a href="#!/sunburst">here</a> for sunburst.</p>
+                <div class="row home-header">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <h1>Welcome to MF-DAT</h1>
+                    </div>
+                </div>
+                <div class="row home-body">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu varius ante. Sed aliquet erat efficitur enim auctor, eu rhoncus nibh vehicula. Sed consequat dui nec sem suscipit, ac vehicula est luctus. Sed pharetra tortor sed turpis pharetra semper. Donec efficitur viverra augue a pellentesque. Quisque ultricies quis leo ut lobortis. Sed eu mi in ligula congue rutrum. Donec molestie malesuada risus, dapibus tempor metus volutpat eget. Morbi luctus dignissim lacus eget rutrum. Mauris id mi sit amet odio hendrerit pellentesque. Sed luctus risus ex, nec ultrices nulla condimentum quis. Nunc molestie bibendum semper.</p>
+                        <p>Proin nulla erat, fringilla in maximus vel, cursus vitae diam. Morbi ut dapibus lacus, scelerisque molestie diam. Nunc pulvinar quis lorem sed bibendum. Ut imperdiet, risus eget ullamcorper cursus, leo risus luctus libero, eu sodales dolor quam maximus neque. Etiam vitae velit scelerisque, pellentesque odio accumsan, posuere mi. Phasellus dapibus metus est, in faucibus diam cursus egestas. Fusce posuere odio at finibus vehicula. Nullam tempus pellentesque neque.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- About Page -->
             <div class="row about hidden">
+                <div class="row team-header">
+                    <div class="col-sm-offset-4 col-sm-4">
+                        <h1>Our Team</h1>
+                    </div>
+                </div>
+                <div class="row team manager">
+                    <div class="col-sm-offset-5 col-sm-2">
+                        <img class="member-head team-manager" src="./img/supriya.png">
+                        <div class="member-name">Supriya Kankure</div>
+                        <div class="member-role">Project Manager</div>
+                    </div>
+                </div>
+                <div class="row team frontend-team">
+                    <div class="col-sm-offset-3 col-sm-2">
+                        <img class="member-head team-lead" src="./img/aaron.png">
+                        <div class="member-name">Aaron Weiss</div>
+                        <div class="member-role">Frontend Lead</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/harry.png">
+                        <div class="member-name">Harry Koumjian</div>
+                        <div class="member-role">Frontend Developer</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/siyu.png">
+                        <div class="member-name">Siyu Peng</div>
+                        <div class="member-role">Frontend Developer</div>
+                    </div>
+                </div>
+                <div class="row team backend-team">
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <img class="member-head team-lead" src="./img/lamson.png">
+                        <div class="member-name">Alex Lamson</div>
+                        <div class="member-role">Backend Lead</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/ryan.png">
+                        <div class="member-name">Ryan Semple</div>
+                        <div class="member-role">Backend Developer</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/sally.png">
+                        <div class="member-name">Sally Li</div>
+                        <div class="member-role">Backend Developer</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/sellers.png">
+                        <div class="member-name">Alex Sellers</div>
+                        <div class="member-role">Backend Developer</div>
+                    </div>
+                </div>
+                <div class="row team db-team">
+                    <div class="col-sm-offset-3 col-sm-2">
+                        <img class="member-head team-lead" src="./img/nicholas.png">
+                        <div class="member-name">Nicholas Perello</div>
+                        <div class="member-role">Database Lead</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/barry.png">
+                        <div class="member-name">Barry Greengus</div>
+                        <div class="member-role">Database Wizard</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="member-head" src="./img/gabe.png">
+                        <div class="member-name">Gabe Hollander</div>
+                        <div class="member-role">Database Wizard</div>
+                    </div>
+                </div>
             </div>
 
             <!-- Visualizations -->
