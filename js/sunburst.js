@@ -59,14 +59,16 @@
 
         function l(n) {
             if (n.score) {
-                alert(
-                    "System Name: " + n.name + "\n" +
-                     "Health Score: " + n.score + "\n" +
-                     "Write Score: " + n.writeScore + "\n" +
-                     "Read Score: " + n.readScore + "\n" +
-                     "CPU-Bandwidth Score: " + n.cbScore + "\n" +
-                     "Delayed Acknowledgement Percent: " + n.delAckPct + "\n"
+                $("#primary-modal-title").html(n.name + " &ndash; Health Report");
+                $("#primary-modal-body").html(
+                    "System Name: " + n.name + "<br>" +
+                    "Health Score: " + n.score + "<br>" +
+                    "Write Score: " + n.writeScore + "<br>" +
+                    "Read Score: " + n.readScore + "<br>" +
+                    "CPU-Bandwidth Score: " + n.cbScore + "<br>" +
+                    "Delayed Acknowledgement Percent: " + n.delAckPct + "<br>"
                 );
+                $("#primary-modal").modal('show');
             } else {
                 h.transition().duration(s).attrTween("d", e(n)), m.style("visibility", function(e) {
                     return t(n, e) ? null : d3.select(this).style("visibility");

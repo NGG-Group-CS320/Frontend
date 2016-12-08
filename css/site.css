@@ -1,3 +1,7 @@
+html, body, .modal-dialog {
+    background: #ecf0f1;
+}
+
 body {
     font-family: 'Hind', sans-serif;
 }
@@ -56,4 +60,8 @@ body {
 
 .vis-container .yLabel {
     baseline-shift: -2px;
+}
+
+.modal-dialog {
+    border-radius: 0.5em;
 }
