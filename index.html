@@ -58,12 +58,25 @@
         </nav>
         <!-- Page Contents -->
         <div class="container-fluid">
-            <div class="row vis-container">
-                <div class="col-sm-offset-2 col-sm-8 wheel-vis">
+            <!-- Home Page -->
+            <div class="row home visible">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h1>Welcome to MF-DAT.</h1>
+                    <p>Click <a href="#!/sunburst">here</a> for sunburst.</p>
+                </div>
+            </div>
+
+            <!-- About Page -->
+            <div class="row about hidden">
+            </div>
+
+            <!-- Visualizations -->
+            <div class="row vis-container hidden">
+                <div class="col-sm-2 vis-pre"></div>
+                <div class="col-sm-8 wheel-vis">
                     <div id="sunburst-vis"><!-- Here be Sunbursts. --></div>
                     <script src="./js/sunburst.js"></script>
                 </div>
-                <div class="col-sm-2"></div>
                 <div class="col-sm-offset-2 col-sm-8 line-vis">
                     <div id="line-vis"><!-- Here be line graphs. --></div>
                     <script src="./js/line.js"></script>
@@ -74,5 +87,10 @@
                     <div class="health-score"></div>
                 </div>
             </div>
+
+        </div>
+
+        <!-- Run navigation. -->
+        <script src="./js/nav.js"></script>
     </body>
 </html>
