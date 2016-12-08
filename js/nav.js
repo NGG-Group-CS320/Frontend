@@ -35,6 +35,7 @@
         $("#about-link").removeClass("current");
         $("#line-link").removeClass("current");
         $(".home").addClass("hidden").removeClass("visible");
+        $(".about").addClass("hidden").removeClass("visible");
         $("#line-vis").addClass("hidden").removeClass("visible");
 
         // Show correct things.
