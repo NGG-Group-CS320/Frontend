@@ -2,10 +2,6 @@ html, body, .modal-dialog {
     background: #ecf0f1;
 }
 
-body {
-    font-family: 'Hind', sans-serif;
-}
-
 .header h1, .header h2 {
     display: inline;
     margin-right: 0.1em;
@@ -51,7 +47,8 @@ body {
 }
 
 .vis-container {
-    text-align: center;
+   font-family: 'Hind', sans-serif;
+   text-align: center;
 }
 
 .vis-container .yLabel {
@@ -60,6 +57,7 @@ body {
 
 .modal-dialog {
     border-radius: 0.5em;
+    margin-top: 64px;
 }
 
 .navbar-brand img {
@@ -84,8 +82,12 @@ body {
     margin-top: 0.1em;
 }
 
-.navbar-inverted a, .navbar-inverted a:visited, .navbar-inverted a:hover {
+.navbar-inverted a, .navbar-inverted a:visited, .navbar-inverted a:hover, .navbar-toggle:before {
     color: #ecf0f1;
+}
+
+.navbar-toggle:hover:before {
+    color: #bdc3c7;
 }
 
 #home-link {
@@ -118,4 +120,50 @@ body {
 
 #line-link:hover {
     background: #d35400;
+}
+
+.home-header, .team, .team-header {
+    text-align: center;
+}
+
+.home-body p {
+    text-align: justify;
+    hyphens: true;
+}
+
+.team, .home-body {
+    margin: 1em 0;
+}
+
+.home-header, .team-header {
+    margin: 0;
+}
+
+.member-head {
+    width: 100%;
+    border-radius: 10em;
+    border: 0.5em solid #34495e;
+}
+
+.team-lead {
+    border-color: #1abc9c;
+}
+
+.team-manager {
+    border-color: #e74c3c;
+}
+
+.member-name {
+    margin-top: 0.5em;
+    margin-bottom: -0.3em;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.member-role {
+    font-size: 16px;
+}
+
+.db-team {
+    margin-bottom: 2em;
 }
