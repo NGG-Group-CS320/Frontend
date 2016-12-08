@@ -101,7 +101,7 @@
         }).attr("d", x).attr("fill-rule", "evenodd").style("fill", n).on("click", l);
         var m = f.selectAll("text").data(o),
             y = m.enter().append("text").style("fill-opacity", 1).style("fill", function(t) {
-                return a(d3.rgb(n(t))) < 125 ? "#eee" : "#000";
+                return a(d3.rgb(n(t))) < 150 ? "#ecf0f1" : "#34495e";
             }).attr("text-anchor", function(t) {
                 return d(t.x + t.dx / 2) > Math.PI ? "end" : "start";
             }).attr("dy", ".2em").attr("transform", function(t) {
