@@ -24,6 +24,10 @@ html, body, .modal-dialog {
     stroke-width: 1;
 }
 
+#sunburst-vis #path-0 {
+    fill: #34495e !important;
+}
+
 #line-vis path {
     stroke: grey;
     stroke-width: 2;
