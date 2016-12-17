@@ -72,6 +72,8 @@
     case "/line":
         goLine();
         break;
+    default:
+        goHome();
     }
 
     $("#home-link").on("click", goHome);
