@@ -1,5 +1,5 @@
 !function () {
-    var width = 720,
+    var width = 620,
         height = width * 2 / 3,
         margin = 30,
         startTime = 1480535424,

@@ -180,7 +180,8 @@ html, body, .modal-dialog {
 }
 
 .filter .panel-body .checkbox{
-  margin-bottom: -15px;
+    margin-bottom: -1em;
+    margin-left: -3em;
 }
 
 .filter .panel-heading {
@@ -188,13 +189,24 @@ html, body, .modal-dialog {
   color: white;
 }
 
-.filter p{
-  margin-bottom: -10px
+.filter .panel-title {
+    font-size: 1.3em;
 }
 
-.filter .time-picker input{
-  margin-top: -15px;
+.filter p {
+    margin-bottom: -0.6em;
 }
-.filter .time-picker label{
-  margin-top: 10px
+
+.filter .time-header {
+    margin-top: 1.3em;
+}
+
+.filter .time-picker input {
+    margin-top: 0.65em;
+}
+.filter .time-picker label {
+    margin-top: 1em;
+}
+
+.vis-pre {
 }

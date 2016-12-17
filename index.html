@@ -157,68 +157,72 @@
 
         <!-- Visualizations -->
         <div class="row vis-container hidden">
-            <div class="col-sm-2 vis-pre">
+            <div class="col-sm-3 vis-pre">
               <div class="panel panel-default filter">
                 <div class="panel-heading">
-                  <h2 style="font-size:20px" class="panel-title">Filter By:</h2>
+                  <h2 class="panel-title">Filter By:</h2>
                 </div>
                 <div class="panel-body">
                   <p>System:</p>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 0</label>
+                  <ul>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 0</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 1</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 2</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 3</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 4</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 5</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 6</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 7</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 8</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 9</label>
+                    </li>
+                    <li class="checkbox">
+                      <label><input type="checkbox" value="">System 10</label>
+                    </li>
+                  </ul>
+
+                  <p class="time-header">Time:</p>
+                  <div class="time-picker">
+                    <label class="pull-left">From:</label>
+                    <input class="pull-right" type="date" value="">
+                    <div class="clearfix"></div>
                   </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 1</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 2</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 3</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 4</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 5</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 6</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 7</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 8</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 9</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">System 10</label>
+                  <div class="time-picker">
+                    <label class="pull-left" >To:</label>
+                    <input class="pull-right" type="date" value="">
+                    <div class="clearfix"></div>
                   </div>
 
-                  <p style="margin-top:20px">Time:</p>
-                  <div class="time-picker">
-                    <label>From:</label>
-                    <input type="date" value="">
-                  </div>
-                  <div class="time-picker">
-                    <label>To:</label>
-                    <input type="date" value="">
-                  </div>
-
-                  <button type="button" class="btn btn-info pull-right" style="margin-top:10px" name="button">OK</button>
+                  <button type="button" class="btn btn-info pull-right" style="margin-top:10px" name="button">Update</button>
                 </div>
               </div>
             </div>
-            <div class="col-sm-8 wheel-vis">
+            <div class="col-sm-7 wheel-vis">
                 <div id="sunburst-vis">
                     <!-- Here be Sunbursts. -->
                 </div>
                 <script src="./js/sunburst.js"></script>
             </div>
-            <div class="col-sm-8 line-vis">
+            <div class="col-sm-7 line-vis">
                 <div id="line-vis">
                     <!-- Here be line graphs. -->
                 </div>
