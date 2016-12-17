@@ -1,4 +1,4 @@
-!function () {
+function drawSunburst(size) {
     function t(n, e) {
         return n === e ? !0 : n.children ? n.children.some(function (n) {
             return t(n, e);
@@ -33,7 +33,7 @@
         return .299 * t.r + .587 * t.g + .114 * t.b;
     }
     var inlineHealthScore = false,
-        i = 540,
+        i = size,
         l = i,
         o = i / 2,
         d = d3.scale.linear().range([0, 2 * Math.PI]),
@@ -42,7 +42,7 @@
         s = 1e3,
         h = d3.select("#sunburst-vis");
 
-    h.select("img").remove();
+    h.select("svg").remove();
     var f = h.append("svg").attr("width", i + 2 * c).attr("height", l + 2 * c).append("g").attr("transform", "translate(" + [o + c, o + c] + ")");
     var p = d3.layout.partition().sort(null).value(function (t) {
             return 5.8 - t.depth;
@@ -120,4 +120,10 @@
             return inlineHealthScore && t.score ? "(" + t.score + ")" : "";
         });
     });
-}();
+}
+
+function drawSizedSunburst() {
+    drawSunburst(Math.floor(this.innerWidth * ((this.innerWidth < 768) ? 0.7 : 0.4)));
+}
+
+$(drawSizedSunburst());

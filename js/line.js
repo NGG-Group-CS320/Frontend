@@ -1,6 +1,7 @@
-!function () {
-    var width = 620,
-        height = width * 2 / 3,
+function drawLineGraph(width) {
+    d3.select("#line-vis").select("svg").remove();
+
+    var height = width * 2 / 3,
         margin = 30,
         startTime = 1480535424,
         endTime = 1481140224,
@@ -87,4 +88,10 @@
         $(this).removeClass("current");
         $("#line-vis-blurb").removeClass("visible").addClass("hidden");
     }
-}();
+}
+
+function drawSizedLineGraph() {
+    drawLineGraph(Math.floor(this.innerWidth * ((this.innerWidth < 768) ? 0.8 : 0.45)));
+}
+
+$(drawSizedLineGraph());
