@@ -171,3 +171,30 @@ html, body, .modal-dialog {
 .db-team {
     margin-bottom: 2em;
 }
+
+.filter .panel-body{
+  text-align: left;
+}
+.filter .panel-body input{
+  margin-top: 10px;
+}
+
+.filter .panel-body .checkbox{
+  margin-bottom: -15px;
+}
+
+.filter .panel-heading {
+  background: #34495e;
+  color: white;
+}
+
+.filter p{
+  margin-bottom: -10px
+}
+
+.filter .time-picker input{
+  margin-top: -15px;
+}
+.filter .time-picker label{
+  margin-top: 10px
+}
