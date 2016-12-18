@@ -59,29 +59,25 @@
         $("#line-vis").addClass("visible").removeClass("hidden");
     }
 
-    switch (window.location.hash.slice(2)) {
-    case "/home":
-        goHome();
-        break;
-    case "/about":
-        goAbout();
-        break;
-    case "/sunburst":
-        goSunburst();
-        break;
-    case "/line":
-        goLine();
-        break;
-    default:
-        goHome();
+    function doNav() {
+        switch (window.location.hash.slice(2)) {
+        case "/home":
+            goHome();
+            break;
+        case "/about":
+            goAbout();
+            break;
+        case "/sunburst":
+            goSunburst();
+            break;
+        case "/line":
+            goLine();
+            break;
+        default:
+            goHome();
+        }
     }
 
-    $("#home-link").on("click", goHome);
-    $("a[href=\"#!/home\"]").on("click", goHome);
-    $("#about-link").on("click", goAbout);
-    $("a[href=\"#!/about\"]").on("click", goAbout);
-    $("#sunburst-link").on("click", goSunburst);
-    $("a[href=\"#!/sunburst\"]").on("click", goSunburst);
-    $("#line-link").on("click", goLine);
-    $("a[href=\"#!/line\"]").on("click", goLine);
+    $(window).on("hashchange", doNav);
+    doNav();
 }();
