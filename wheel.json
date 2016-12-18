@@ -6,11 +6,13 @@
                 "name": "0-200",
                 "children": [
                     {
+                        "id": "system0",
                         "name": "System 0",
                         "colour": "#c0392b",
                         "score": "18"
                     },
                     {
+                        "id": "system1",
                         "name": "System 1",
                         "colour": "#e74c3c",
                         "score": "155"
@@ -21,11 +23,13 @@
                 "name": "200-400",
                 "children": [
                     {
+                        "id": "system2",
                         "name": "System 2",
                         "colour": "#d35400",
                         "score": "222"
                     },
                     {
+                        "id": "system3",
                         "name": "System 3",
                         "colour": "#e67e22",
                         "score": "364"
@@ -41,16 +45,19 @@
                 "name": "400-600",
                 "children": [
                     {
+                        "id": "system4",
                         "name": "System 4",
                         "colour": "#f39c12",
                         "score": "411"
                     },
                     {
+                        "id": "system5",
                         "name": "System 5",
                         "colour": "#f1c40f",
                         "score": "518"
                     },
                     {
+                        "id": "system6",
                         "name": "System 6",
                         "colour": "#f1c40f",
                         "score": "594"
@@ -61,16 +68,19 @@
                 "name": "600-800",
                 "children": [
                     {
+                        "id": "system7",
                         "name": "System 7",
                         "colour": "#2ecc71",
                         "score": "603"
                     },
                     {
+                        "id": "system8",
                         "name": "System 8",
                         "colour": "#2ecc71",
                         "score": "621"
                     },
                     {
+                        "id": "system9",
                         "name": "System 9",
                         "colour": "#27ae60",
                         "score": "763",
@@ -80,6 +90,7 @@
                         "delAckPct": "0"
                     },
                     {
+                        "id": "system10",
                         "name": "System 10",
                         "colour": "#27ae60",
                         "score": "800"
