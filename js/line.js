@@ -1,6 +1,7 @@
-!function () {
-    var width = 720,
-        height = width * 2 / 3,
+function drawLineGraph(width) {
+    d3.select("#line-vis").select("svg").remove();
+
+    var height = width * 2 / 3,
         margin = 30,
         startTime = 1480535424,
         endTime = 1481140224,
@@ -71,7 +72,7 @@
                     y: d.score
                 };
             })]).attr("system", system.id).attr("d", line)
-                .style("stroke", function(){return system.color = "#"+((1<<24)*Math.random()|0).toString(16)})
+                .style("stroke", function() { return system.color = "#" + ((1 << 24) * Math.random() | 0).toString(16); })
                 .on("mouseover", onMouseOver).on("mouseout", onMouseOut)
                 .attr("system-name", system.name).attr("system-score", averageHealthScore);
         });
@@ -88,4 +89,10 @@
         $(this).removeClass("current");
         $("#line-vis-blurb").removeClass("visible").addClass("hidden");
     }
-}();
+}
+
+function drawSizedLineGraph() {
+    drawLineGraph(Math.floor(this.innerWidth * ((this.innerWidth < 768) ? 0.8 : 0.45)));
+}
+
+$(drawSizedLineGraph());
