@@ -77,7 +77,8 @@ Session.vim
 .netrwhist
 *~
 # auto-generated tag files
-tags*.DS_Store
+tags*
+.DS_Store
 .AppleDouble
 .LSOverride
 
