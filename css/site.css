@@ -173,15 +173,11 @@ html, body, .modal-dialog {
 }
 
 .filter .panel-body{
-  text-align: left;
-}
-.filter .panel-body input{
-  margin-top: 10px;
+    text-align: left;
 }
 
 .filter .panel-body .checkbox{
-    margin-bottom: -1em;
-    margin-left: -3em;
+    margin: 0.8em 1.5em;
 }
 
 .filter .panel-heading {
@@ -198,15 +194,6 @@ html, body, .modal-dialog {
 }
 
 .filter .time-header {
-    margin-top: 1.3em;
-}
-
-.filter .time-picker input {
-    margin-top: 0.65em;
-}
-.filter .time-picker label {
     margin-top: 1em;
-}
-
-.vis-pre {
+    margin-bottom: 0.5em;
 }

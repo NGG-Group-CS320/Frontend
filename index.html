@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MF-DAT / The NGG Group</title>
     <link href="https://fonts.googleapis.com/css?family=Hind:400" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="./css/flat-ui.min.css" rel="stylesheet">
     <link href="./css/site.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -17,14 +17,14 @@
 
     <!-- Here be JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/moment.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-datetimepicker.min.js"></script>
     <script src="./js/flat-ui.min.js"></script>
     <script src="./js/d3.min.js"></script>
-    <script src="./js/moment.min.js"></script>
     <script src="./js/app.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
     <!-- Modal -->
     <div id="primary-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-modal-title">
         <div class="modal-dialog" role="document">
@@ -44,11 +44,11 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#">
                     <img alt="The NGG Group" src="./img/ngg-logo.png">
                     <span>MF-DAT</span>
@@ -175,55 +175,98 @@
                 </div>
                 <div class="panel-body">
                   <p>System:</p>
-                  <ul>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system0" checked>System 0</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system1" checked>System 1</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system2" checked>System 2</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system3" checked>System 3</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system4" checked>System 4</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system5" checked>System 5</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system6" checked>System 6</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system7" checked>System 7</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system8" checked>System 8</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system9" checked>System 9</label>
-                    </li>
-                    <li class="checkbox">
-                      <label><input type="checkbox" value="system10" checked>System 10</label>
-                    </li>
-                  </ul>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system0"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 0
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system1"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 1
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system2"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 2
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system3"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 3
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system4"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 4
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system5"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 5
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system6"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 6
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system7"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 7
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system8"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 8
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system9"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 9
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" value="system10"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 10
+                  </label>
 
                   <p class="time-header">Time:</p>
-                  <div class="time-picker">
-                    <label class="pull-left">From:</label>
-                    <input class="pull-right" type="date" value="">
+                  <div class="form-group time-picker">
+                      <label>From:</label>
+                      <div class="input-group" id="from-time">
+                          <input class="form-control" id="from-time-input" type="text">
+                          <span class="input-group-btn" id="from-time-btn">
+                              <button class="btn"><span class="fui-calendar"></span></button>
+                          </span>
+                      </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="time-picker">
-                    <label class="pull-left" >To:</label>
-                    <input class="pull-right" type="date" value="">
+                  <div class="form-group time-picker">
+                      <label>To:</label>
+                      <div class="input-group" id="to-time">
+                          <input class="form-control" id="to-time-input" type="text">
+                          <span class="input-group-btn" id="to-time-btn">
+                              <button class="btn"><span class="fui-calendar"></span></button>
+                          </span>
+                      </div>
                     <div class="clearfix"></div>
                   </div>
+                  <script>
+                   $(function() {
+                       $("#from-time-input").on("focusin", function () {
+                           $("#from-time").addClass("focus");
+                       });
+                       $("#from-time-input").on("focusout", function () {
+                           $("#from-time").removeClass("focus");
+                       });
+                       $("#from-time-btn").on("click", function () {
+                           $("#from-time-input").data("DateTimePicker").toggle();
+                       });
+                       $("#from-time-input").datetimepicker();
+                       $("#to-time-input").on("focusin", function () {
+                           $("#to-time").addClass("focus");
+                       });
+                       $("#to-time-input").on("focusout", function () {
+                           $("#to-time").removeClass("focus");
+                       });
+                       $("#to-time-btn").on("click", function () {
+                           $("#to-time-input").data("DateTimePicker").toggle();
+                       });
+                       $("#to-time-input").datetimepicker();
+                   });
+                  </script>
 
-                  <button type="button" class="btn btn-info pull-right" style="margin-top:10px" name="button">Update</button>
+                  <button type="button" class="btn btn-info pull-right" name="button">Update</button>
                 </div>
               </div>
             </div>
@@ -257,6 +300,5 @@
 
     <!-- Run navigation. -->
     <script src="./js/nav.js"></script>
-</body>
-
+  </body>
 </html>
