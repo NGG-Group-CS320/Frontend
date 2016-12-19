@@ -92,7 +92,7 @@ function drawLineGraph(width) {
 }
 
 function drawSizedLineGraph() {
-    drawLineGraph(Math.floor(this.innerWidth * ((this.innerWidth < 768) ? 0.8 : 0.45)));
+    drawLineGraph(Math.floor(this.innerWidth * ((this.innerWidth < 768) ? 0.8 : 0.49)));
 }
 
 $(drawSizedLineGraph());
