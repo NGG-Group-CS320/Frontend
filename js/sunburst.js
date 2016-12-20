@@ -12,7 +12,7 @@ function drawSunburst(size) {
                 a = d3.hsl(e[1]);
             return d3.hsl((r.h + a.h) / 2, 1.2 * r.s, r.l / 1.2);
         }
-        return t.colour || "#fff";
+        return t.color || "#fff";
     }
 
     function e(t) {
