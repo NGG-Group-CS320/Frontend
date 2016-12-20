@@ -1,13 +1,31 @@
 var lineData = {};
 
 function fetchLineData(redraw) {
-    d3.json("./line.json" /*"http://localhost:8081/line/809,2848,251,3565,17,325"*/, function (error, data) {
+    var ids = jQuery.makeArray($(".custom-checkbox:checked").map(function (x) {
+        return $(".custom-checkbox:checked").get(x).value;
+    })).reduce(function (x, y) {
+        return x + "," + y;
+    });
+
+    d3.json("http://localhost:8081/line/" + ids, function (error, data) {
         if (error) throw error;
         lineData = data;
         if (redraw !== undefined) {
             drawSizedLineGraph();
         }
     });
+}
+
+var colors = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6",
+              "#16a085", "#27ae60", "#2980b9", "#8e44ad",
+                         "#e67e22", "#e74c3c",
+                         "#d35400", "#c0392b"];
+
+var lowestScore = 150, highestScore = 800;
+
+function updateLineRange(event) {
+    lowestScore = event.value[0];
+    highestScore = event.value[1];
 }
 
 function drawLineGraph(width) {
@@ -17,8 +35,6 @@ function drawLineGraph(width) {
         margin = 30,
         startTime = 1465550146,
         endTime = 1478345159,
-        lowestScore = 0,
-        highestScore = 800,
         y = d3.scale.linear().domain([highestScore, lowestScore]).range([0 + margin, height - margin]),
         x = d3.scale.linear().domain([startTime, endTime]).range([6 + margin,  width]),
         times = d3.range(startTime, endTime),
@@ -68,8 +84,9 @@ function drawLineGraph(width) {
         return y(d);
     }).attr("x2", x(startTime) - 5);
 
+    var colorIndex = 0;
+
     // Add data to the line graph.
-    // d3.json("./line.json", function (error, data) {
     lineData.forEach(function (system) {
         var averageHealthScore = Math.floor(system.data.map(function (d) {
             return 1 * d.score;
@@ -82,9 +99,12 @@ function drawLineGraph(width) {
                 y: d.score
             };
         })]).attr("system", system.id).attr("d", line)
-            .style("stroke", function() { return system.color = "#" + ((1 << 24) * Math.random() | 0).toString(16); })
+            .style("stroke", function() { return system.color = colors[colorIndex]; })
             .on("mouseover", onMouseOver).on("mouseout", onMouseOut)
-            .attr("system-name", system.name).attr("system-score", averageHealthScore);
+            .attr("system-name", system.name).attr("system-score", averageHealthScore)
+            .attr("color-index", colorIndex);
+
+        colorIndex += 1;
     });
 
     function onMouseOver(d, i) {

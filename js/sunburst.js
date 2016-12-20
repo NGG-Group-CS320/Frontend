@@ -1,7 +1,13 @@
 var wheelData = {};
 
 function fetchSunburstData(redraw) {
-    d3.json("./wheel.json" /*"http://localhost:8081/wheel/809,2848,251,3565,17,325"*/, function (error, data) {
+    var ids = jQuery.makeArray($(".custom-checkbox:checked").map(function (x) {
+        return $(".custom-checkbox:checked").get(x).value;
+    })).reduce(function (x, y) {
+        return x + "," + y;
+    });
+
+    d3.json("http://localhost:8081/wheel/" + ids, function (error, data) {
         if (error) throw error;
         wheelData = data;
         if (redraw !== undefined) {

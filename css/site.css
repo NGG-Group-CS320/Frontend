@@ -172,17 +172,19 @@ html, body, .modal-dialog {
     margin-bottom: 2em;
 }
 
-.filter .panel-body{
+.filter .panel-body {
     text-align: left;
 }
 
-.filter .panel-body .checkbox{
+.filter .panel-body .checkbox {
     margin: 0.8em 1.5em;
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
 .filter .panel-heading {
-  background: #34495e;
-  color: white;
+    background: #34495e;
+    color: white;
 }
 
 .filter .panel-title {
@@ -193,7 +195,19 @@ html, body, .modal-dialog {
     margin-bottom: -0.6em;
 }
 
-.filter .time-header {
+.filter .time-header, .filter .health-header {
     margin-top: 1em;
     margin-bottom: 0.5em;
+}
+
+.filter .health-score-slider .slider {
+    margin: 0 0.5em;
+    width: 180px;
+    position: relative;
+    top: -0.05em
+}
+
+.filter .health-score-slider {
+    text-align: center;
+    margin-top: 1em;
 }

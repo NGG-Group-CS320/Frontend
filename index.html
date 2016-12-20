@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Hind:400" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="./css/bootstrap-slider.min.css" rel="stylesheet">
     <link href="./css/flat-ui.min.css" rel="stylesheet">
     <link href="./css/site.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -20,6 +21,7 @@
     <script src="./js/moment.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/bootstrap-datetimepicker.min.js"></script>
+    <script src="./js/bootstrap-slider.min.js"></script>
     <script src="./js/flat-ui.min.js"></script>
     <script src="./js/d3.min.js"></script>
     <script src="./js/app.js"></script>
@@ -176,49 +178,56 @@
                 <div class="panel-body">
                   <p>System:</p>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system0"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 0
+                    <input checked type="checkbox" value="16"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 16
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system1"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 1
+                    <input checked type="checkbox" value="17"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 17
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system2"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 2
+                    <input checked type="checkbox" value="94"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 94
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system3"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 3
+                    <input checked type="checkbox" value="153"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 153
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system4"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 4
+                    <input checked type="checkbox" value="251"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 251
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system5"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 5
+                    <input checked type="checkbox" value="325"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 325
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system6"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 6
+                    <input checked type="checkbox" value="442"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 442
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system7"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 7
+                    <input checked type="checkbox" value="444"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 444
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system8"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 8
+                    <input checked type="checkbox" value="809"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 809
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system9"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 9
+                    <input checked type="checkbox" value="2848"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 2848
                   </label>
                   <label class="checkbox">
-                    <input checked type="checkbox" value="system10"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-                    System 10
+                    <input checked type="checkbox" value="3565"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    System 3565
                   </label>
+
+                  <p class="line-only health-header">Health Score (Line Graph):</p>
+                  <div class="line-only health-score-slider">
+                      <b>0</b>
+                      <input id="hs-range" type="text" value="" data-slider-min="0" data-slider-max="800" data-slider-step="50" data-slider-value="[150,800]">
+                      <b>800</b>
+                  </div>
 
                   <p class="time-header">Time:</p>
                   <div class="form-group time-picker">
@@ -241,6 +250,9 @@
                       </div>
                     <div class="clearfix"></div>
                   </div>
+
+                  <button id="update"  type="button" class="btn btn-info pull-right" name="button">Update</button>
+
                   <script>
                    $(function() {
                        $("#from-time-input").on("focusin", function () {
@@ -263,10 +275,15 @@
                            $("#to-time-input").data("DateTimePicker").toggle();
                        });
                        $("#to-time-input").datetimepicker();
+
+                       $("#hs-range").bootstrapSlider().on("slideStop", updateLineRange);
+
+                       $("#update").on("click", function () {
+                           fetchLineData(true);
+                           fetchSunburstData(true);
+                       });
                    });
                   </script>
-
-                  <button type="button" class="btn btn-info pull-right" name="button">Update</button>
                 </div>
               </div>
             </div>
