@@ -1,10 +1,22 @@
+var lineData = {};
+
+function fetchLineData(redraw) {
+    d3.json("./line.json" /*"http://localhost:8081/line/809,2848,251,3565,17,325"*/, function (error, data) {
+        if (error) throw error;
+        lineData = data;
+        if (redraw !== undefined) {
+            drawSizedLineGraph();
+        }
+    });
+}
+
 function drawLineGraph(width) {
     d3.select("#line-vis").select("svg").remove();
 
     var height = width * 2 / 3,
         margin = 30,
-        startTime = 1480535424,
-        endTime = 1481140224,
+        startTime = 1465550146,
+        endTime = 1478345159,
         lowestScore = 0,
         highestScore = 800,
         y = d3.scale.linear().domain([highestScore, lowestScore]).range([0 + margin, height - margin]),
@@ -57,25 +69,22 @@ function drawLineGraph(width) {
     }).attr("x2", x(startTime) - 5);
 
     // Add data to the line graph.
-    d3.json("./line.json", function (error, data) {
-        if (error) throw error;
-
-        data.forEach(function (system) {
-            var averageHealthScore = Math.floor(system.data.map(function (d) {
-                return 1 * d.score;
-            }).reduce(function (x, y) {
-                return x + y;
-            }, 0) / system.data.length);
-            vis.append("svg:path").data([system.data.map(function (d) {
-                return {
-                    x: d.time,
-                    y: d.score
-                };
-            })]).attr("system", system.id).attr("d", line)
-                .style("stroke", function() { return system.color = "#" + ((1 << 24) * Math.random() | 0).toString(16); })
-                .on("mouseover", onMouseOver).on("mouseout", onMouseOut)
-                .attr("system-name", system.name).attr("system-score", averageHealthScore);
-        });
+    // d3.json("./line.json", function (error, data) {
+    lineData.forEach(function (system) {
+        var averageHealthScore = Math.floor(system.data.map(function (d) {
+            return 1 * d.score;
+        }).reduce(function (x, y) {
+            return x + y;
+        }, 0) / system.data.length);
+        vis.append("svg:path").data([system.data.map(function (d) {
+            return {
+                x: d.time,
+                y: d.score
+            };
+        })]).attr("system", system.id).attr("d", line)
+            .style("stroke", function() { return system.color = "#" + ((1 << 24) * Math.random() | 0).toString(16); })
+            .on("mouseover", onMouseOver).on("mouseout", onMouseOut)
+            .attr("system-name", system.name).attr("system-score", averageHealthScore);
     });
 
     function onMouseOver(d, i) {
@@ -95,4 +104,4 @@ function drawSizedLineGraph() {
     drawLineGraph(Math.floor(this.innerWidth * ((this.innerWidth < 768) ? 0.8 : 0.49)));
 }
 
-$(drawSizedLineGraph());
+$(fetchLineData(true));
