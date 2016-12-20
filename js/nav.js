@@ -8,6 +8,7 @@
         $(".vis-container").addClass("hidden").removeClass("visible");
         $("#sunburst-vis").addClass("hidden").removeClass("visible");
         $("#line-vis").addClass("hidden").removeClass("visible");
+        $(".line-only").addClass("hidden").removeClass("visible");
 
         // Show correct things.
         $("#home-link").addClass("current");
@@ -23,6 +24,7 @@
         $(".vis-container").addClass("hidden").removeClass("visible");
         $("#sunburst-vis").addClass("hidden").removeClass("visible");
         $("#line-vis").addClass("hidden").removeClass("visible");
+        $(".line-only").addClass("hidden").removeClass("visible");
 
         // Show correct things.
         $("#about-link").addClass("current");
@@ -37,6 +39,7 @@
         $(".home").addClass("hidden").removeClass("visible");
         $(".about").addClass("hidden").removeClass("visible");
         $("#line-vis").addClass("hidden").removeClass("visible");
+        $(".line-only").addClass("hidden").removeClass("visible");
 
         // Show correct things.
         $("#sunburst-link").addClass("current");
@@ -55,6 +58,7 @@
 
         // Show correct things.
         $("#line-link").addClass("current");
+        $(".line-only").addClass("visible").removeClass("hidden");
         $(".vis-container").addClass("visible").removeClass("hidden");
         $("#line-vis").addClass("visible").removeClass("hidden");
     }

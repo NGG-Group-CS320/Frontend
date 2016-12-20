@@ -13,7 +13,9 @@ function fetchLineData(redraw) {
         if (redraw !== undefined) {
             drawSizedLineGraph();
         }
+        $("#update").removeClass("disabled");
     });
+
 }
 
 var colors = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6",
@@ -99,10 +101,15 @@ function drawLineGraph(width) {
                 y: d.score
             };
         })]).attr("system", system.id).attr("d", line)
-            .style("stroke", function() { return system.color = colors[colorIndex]; })
+            .style("stroke", function() { return colors[colorIndex]; })
             .on("mouseover", onMouseOver).on("mouseout", onMouseOut)
             .attr("system-name", system.name).attr("system-score", averageHealthScore)
             .attr("color-index", colorIndex);
+
+        // Color code the names on the left-side.
+        $("label[system=" + system.id + "]").css("color", function () {
+            return colors[colorIndex];
+        });
 
         colorIndex += 1;
     });

@@ -6,3 +6,11 @@ $(window).resize(function() {
         $(this).trigger('resizeThrottled');
     }, 30);
 });
+
+var systems = [16, 17, 94, 153, 251, 325, 442, 444, 809, 2848, 3565]
+
+function clearColorCoding() {
+    systems.forEach(function (x) {
+        $("label[system=" + x + "]").css("color", "inherit");
+    });
+}

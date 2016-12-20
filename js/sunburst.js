@@ -13,6 +13,7 @@ function fetchSunburstData(redraw) {
         if (redraw !== undefined) {
             drawSizedSunburst();
         }
+        $("#update").removeClass("disabled");
     });
 }
 

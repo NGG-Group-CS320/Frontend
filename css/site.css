@@ -202,12 +202,12 @@ html, body, .modal-dialog {
 
 .filter .health-score-slider .slider {
     margin: 0 0.5em;
-    width: 180px;
+    width: 70%;
     position: relative;
     top: -0.05em
 }
 
 .filter .health-score-slider {
     text-align: center;
-    margin-top: 1em;
+    margin: 1em 0;
 }

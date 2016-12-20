@@ -177,60 +177,60 @@
                 </div>
                 <div class="panel-body">
                   <p>System:</p>
-                  <label class="checkbox">
+                  <label class="checkbox" system="16">
                     <input checked type="checkbox" value="16"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 16
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="17">
                     <input checked type="checkbox" value="17"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 17
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="94">
                     <input checked type="checkbox" value="94"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 94
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="153">
                     <input checked type="checkbox" value="153"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 153
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="251">
                     <input checked type="checkbox" value="251"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 251
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="325">
                     <input checked type="checkbox" value="325"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 325
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="442">
                     <input checked type="checkbox" value="442"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 442
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="444">
                     <input checked type="checkbox" value="444"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 444
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="809">
                     <input checked type="checkbox" value="809"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 809
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="2848">
                     <input checked type="checkbox" value="2848"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 2848
                   </label>
-                  <label class="checkbox">
+                  <label class="checkbox" system="3565">
                     <input checked type="checkbox" value="3565"  data-toggle="checkbox" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
                     System 3565
                   </label>
 
-                  <p class="line-only health-header">Health Score (Line Graph):</p>
+                  <p class="line-only health-header">Health Score Range:</p>
                   <div class="line-only health-score-slider">
                       <b>0</b>
                       <input id="hs-range" type="text" value="" data-slider-min="0" data-slider-max="800" data-slider-step="50" data-slider-value="[150,800]">
                       <b>800</b>
                   </div>
 
-                  <p class="time-header">Time:</p>
-                  <div class="form-group time-picker">
+                  <p class="hidden time-header">Time:</p>
+                  <div class="hidden form-group time-picker">
                       <label>From:</label>
                       <div class="input-group" id="from-time">
                           <input class="form-control" id="from-time-input" type="text">
@@ -240,7 +240,7 @@
                       </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="form-group time-picker">
+                  <div class="hidden form-group time-picker">
                       <label>To:</label>
                       <div class="input-group" id="to-time">
                           <input class="form-control" id="to-time-input" type="text">
@@ -279,8 +279,12 @@
                        $("#hs-range").bootstrapSlider().on("slideStop", updateLineRange);
 
                        $("#update").on("click", function () {
-                           fetchLineData(true);
-                           fetchSunburstData(true);
+                           if ($("update").hasClass("disabled") === false) {
+                               $("#update").addClass("disabled");
+                               clearColorCoding();
+                               fetchLineData(true);
+                               fetchSunburstData(true);
+                           }
                        });
                    });
                   </script>
