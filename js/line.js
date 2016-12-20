@@ -7,7 +7,7 @@ function fetchLineData(redraw) {
         return x + "," + y;
     });
 
-    d3.json("http://localhost:8081/line/" + ids, function (error, data) {
+    d3.json("http://api.mfdat.host:8080/line/" + ids, function (error, data) {
         if (error) throw error;
         lineData = data;
         if (redraw !== undefined) {

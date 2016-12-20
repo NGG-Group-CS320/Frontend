@@ -7,7 +7,7 @@ function fetchSunburstData(redraw) {
         return x + "," + y;
     });
 
-    d3.json("http://localhost:8081/wheel/" + ids, function (error, data) {
+    d3.json("http://api.mfdat.host:8080/wheel/" + ids, function (error, data) {
         if (error) throw error;
         wheelData = data;
         if (redraw !== undefined) {
