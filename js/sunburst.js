@@ -5,7 +5,7 @@ function fetchSunburstData(redraw) {
         return $(".custom-checkbox:checked").get(x).value;
     })).reduce(function (x, y) {
         return x + "," + y;
-    });
+    }, "");
 
     d3.json("http://api.mfdat.host:8080/wheel/" + ids, function (error, data) {
         if (error) throw error;
