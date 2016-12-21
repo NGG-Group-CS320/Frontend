@@ -281,22 +281,18 @@
 
                        $("#hs-range").bootstrapSlider().on("slideStop", updateLineRange);
 
-                       $(".custom-checkbox").on("click", function () {
-                           if ($("#update").hasClass("disabled") === false) {
-                               $("#update").addClass("disabled");
-                               fetchLineData(true);
-                               fetchSunburstData(true);
-                           }
-                       });
-
-                       $("#update").on("click", function () {
+                       function doUpdate() {
                            if ($("#update").hasClass("disabled") === false) {
                                $("#update").addClass("disabled");
                                clearColorCoding();
                                fetchLineData(true);
                                fetchSunburstData(true);
                            }
-                       });
+                       }
+
+                       $(".custom-checkbox").on("click", doUpdate);
+
+                       $("#update").on("click", doUpdate);
                    });
                   </script>
                 </div>
