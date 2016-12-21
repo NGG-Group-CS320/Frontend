@@ -281,8 +281,16 @@
 
                        $("#hs-range").bootstrapSlider().on("slideStop", updateLineRange);
 
+                       $(".custom-checkbox").on("click", function () {
+                           if ($("#update").hasClass("disabled") === false) {
+                               $("#update").addClass("disabled");
+                               fetchLineData(true);
+                               fetchSunburstData(true);
+                           }
+                       });
+
                        $("#update").on("click", function () {
-                           if ($("update").hasClass("disabled") === false) {
+                           if ($("#update").hasClass("disabled") === false) {
                                $("#update").addClass("disabled");
                                clearColorCoding();
                                fetchLineData(true);

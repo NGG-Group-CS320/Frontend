@@ -28,6 +28,7 @@ var lowestScore = 150, highestScore = 800;
 function updateLineRange(event) {
     lowestScore = event.value[0];
     highestScore = event.value[1];
+    drawSizedLineGraph();
 }
 
 function drawLineGraph(width) {
