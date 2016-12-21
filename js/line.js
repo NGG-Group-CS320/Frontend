@@ -5,7 +5,7 @@ function fetchLineData(redraw) {
         return $(".custom-checkbox:checked").get(x).value;
     })).reduce(function (x, y) {
         return x + "," + y;
-    }, "");
+    });
 
     d3.json("http://api.mfdat.host:8080/line/" + ids, function (error, data) {
         if (error) throw error;
